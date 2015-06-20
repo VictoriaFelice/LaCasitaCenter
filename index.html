@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<title>La Casita Center</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/responsive.css"><!-- we want this file after main.css because we're building on top of our mobile styles to create tablet and desktop styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="nav-wrap">
+    <ul class="main-nav">
+      <li><a class="main_menu selected" href="#">Home</a></li>
+      <li class="dropdown"><a class="main_menu" href="#">Who we are</a>
+        <ul class="drop-nav">
+          <li><a href="#">Mission and vision</a></li>
+					<li><a href="#">Our circle</a></li>
+					<li><a href="#">Contact us</a></li>
+        </ul>
+      </li>
+			<li class="dropdown"><a class="main_menu" href="#">What we do</a>
+        <ul class="drop-nav long-line">
+          <li><a href="#">Empowerment and education</a></li>
+					<li><a href="#">Accompaniment and hospitality</a></li>
+					<li><a href="#">Advocacy and outreach</a></li>
+        </ul>
+      </li>
+			<li><a class="main_menu" href="#">Get involved</a></li>
+			<li class="dropdown"><a class="main_menu" href="#">Support us</a>
+        <ul class="drop-nav">
+          <li><a href="#">Sponsor</a></li>
+					<li><a href="#">Wish list</a></li>
+        </ul>
+      </li>
+			<li class="dropdown"><a class="main_menu" href="#">Events</a>
+        <ul class="drop-nav">
+          <li><a href="#">Fundraisers</a></li>
+					<li><a href="#">Calendar</a></li>
+        </ul>
+      </li>
+		</ul>
+		<a href="sponsor.html" id="donate-bg"></a>
+  </div>
+	
+	<header>
+		<a href="index.html">
+			<img src="img/logo.png" alt="Logo of La Casita Center" id="logo-img">
+		</a>
+		<h1>Working to enhance the health and well-being of the Hispanic/Latino community</h1>	
+	</header>
+	
+	<div id="wrapper">
+		<section>
+			<p>Text here</p>
+		</section>
+			
+		<footer>
+			<p>&copy; 2015 La Casita Center.</p>
+		</footer>
+	</div>
+			
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js"></script>
+	<script type="text/javascript">
+		/* prepend menu icon */
+		$(".nav-wrap").prepend('<div id="menu-icon-bar">MENU</div>');
+		/* toggle nav */
+		$("#menu-icon-bar").on("click", function(){
+			$(".main-nav").slideToggle();
+			$(this).toggleClass("active");
+		});
+	</script>
+</body>
+</html>

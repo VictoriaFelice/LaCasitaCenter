@@ -1,0 +1,119 @@
+@media screen and (min-width: 480px) {
+	/******************************
+	NAVIGATION
+	******************************/
+	.dropdown:after { /* arrow-icon */
+		right: 45%;
+	}	
+}
+
+@media screen and (min-width: 640px) {
+	/******************************
+	NAVIGATION
+	******************************/
+	.dropdown:after { /* arrow-icon */
+		right: 60%;
+	}	
+}
+
+@media screen and (min-width: 768px) {
+	/******************************
+	NAVIGATION
+	******************************/
+	.main-nav {
+		padding-left: 0;
+		display: block !important; /* ensure .main-nav is visible on desktop version */
+		margin-top: 0;
+	}
+	
+	.main-nav > li {
+		float: left;
+	}
+
+	.main-nav a {
+		padding: 10px 13px;
+	}
+	
+	.main_menu {
+		font-size: 0.95em;
+	}
+	
+	.dropdown:after { /* arrow-icon */
+		right: 2%;
+	}
+
+	/* menu icon */
+	#menu-icon-bar {
+		display: none; /* hide menu icon */
+	}
+	
+	#donate-bg {
+		width: 80px;
+		height: 76px;
+		right: 0px;
+		background: url('../img/donateRibbon768.png') no-repeat;
+	}
+	
+	/******************************
+	HEADER
+	******************************/
+	header {
+		height: 200px;
+	}
+	
+	header a {
+		width: 253px;
+		height: 162px;
+		margin-top: -84px;
+	}
+	
+	#logo-img {
+		width: 253px;
+		height: 162px;
+	}
+	
+	header h1 {
+		font-size: 2em;
+		margin-right: 15%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	/******************************
+	NAVIGATION
+	******************************/
+	.main-nav {
+		padding-left: 0;
+	}
+	
+	.main-nav a {
+		padding: 10px 30px;
+	}
+	
+	.main_menu {
+		font-size: 1em;
+	}
+	
+	.dropdown:after { /* arrow-icon */
+		right: 8%;
+	}
+	
+	#donate-bg {
+		width: 100px;
+		height: 86px;
+		background: url('../img/donateRibbon.png') no-repeat;
+	}
+}
+
+@media screen and (min-width: 1260px) {
+	/******************************
+	NAVIGATION
+	******************************/
+	.main-nav {
+		padding-left: 5%;
+	}
+	
+	#donate-bg {
+		right: 5%;
+	}
+}
