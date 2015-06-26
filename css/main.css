@@ -53,6 +53,7 @@ NAVIGATION
 	
 .main_menu {
 	text-transform: uppercase;
+	border-top: 1px solid #78191D;
 }
 
 a:hover, /* "because that white outline we got rid off earlier (a:focus {outline: 0;}) was providing an important accessibility feature, we should add back in a style for our links focus and active states. Personally, I just like to make them the same as the hover state. It's about the same thing, as far as actual function. Whatever your hover state is, even if it's shifting a background image or changing size or whatever, it can be joined with the active and focus states" (from treehouse) */
@@ -65,20 +66,12 @@ a.selected {
   position: relative;
 }
 
-.arrow { /* down-arrow icon */
-	position: relative;
-	background-image: url('../img/down-arrow-icon.png');
-  background-color: transparent;
-  background-repeat: no-repeat;
-	background-position: center right;
-	margin-right: 30%;
-}
-
 .drop-nav {
-  display: none;
+  /* display: none; */
 	width: 100%; /* width of submenus */
-	padding-left: 15px;
+	padding-left: 30px;
 	background: #A63B35;
+	border-top: 1px solid #78191D;
 }
 
 .dropdown:hover > .drop-nav {

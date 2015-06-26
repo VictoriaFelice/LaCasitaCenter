@@ -2,19 +2,12 @@
 	/******************************
 	NAVIGATION
 	******************************/
-	.arrow { /* down-arrow icon */
-		margin-right: 45%;
-	}
 }
 
 @media screen and (min-width: 640px) {
 	/******************************
 	NAVIGATION
 	******************************/
-	.arrow { /* down-arrow icon */
-		margin-right: 50%;
-	}
-	
 	#menu-icon-bar {
 		padding-left: 23%; /* positioning of the word MENU */
 	}
@@ -45,9 +38,15 @@
 	
 	.main_menu {
 		font-size: 0.95em;
+		border-top: none;
 	}
 	
-	.arrow { /* down arrow icon */
+	.arrow { /* down-arrow icon */
+		position: relative;
+		background-image: url('../img/down-arrow-icon.png');
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center right;
 		margin-right: 2px;
 	}
 	
@@ -66,6 +65,7 @@
 		display: none;
 		width: 200px; /* width of submenus */
 		padding-left: 0;
+		border-top: none;
 	}
 	
 	.long-line {
@@ -149,6 +149,10 @@
 	
 	.main-nav a {
 		padding: 10px 30px;
+	}
+	
+	.arrow { /* down arrow icon */
+		margin-right: 15px;
 	}
 	
 	#donate-bg {
