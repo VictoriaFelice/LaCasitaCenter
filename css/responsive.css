@@ -2,18 +2,22 @@
 	/******************************
 	NAVIGATION
 	******************************/
-	.dropdown:after { /* arrow-icon */
-		right: 45%;
-	}	
+	.arrow { /* down-arrow icon */
+		margin-right: 45%;
+	}
 }
 
 @media screen and (min-width: 640px) {
 	/******************************
 	NAVIGATION
 	******************************/
-	.dropdown:after { /* arrow-icon */
-		right: 60%;
-	}	
+	.arrow { /* down-arrow icon */
+		margin-right: 50%;
+	}
+	
+	#menu-icon-bar {
+		padding-left: 23%; /* positioning of the word MENU */
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -28,18 +32,48 @@
 	
 	.main-nav > li {
 		float: left;
+		border-left: solid 1px #1e2a36;
+	}
+	
+	.main-nav li:first-child {
+		border-left: none;
 	}
 
 	.main-nav a {
-		padding: 10px 13px;
+		padding: 10px 10px;
 	}
 	
 	.main_menu {
 		font-size: 0.95em;
 	}
 	
-	.dropdown:after { /* arrow-icon */
+	.arrow { /* down arrow icon */
+		margin-right: 2px;
+	}
+	
+	/* .main_menu:after { /* this code had problems on mobile screens) 
+		content: "\25BC"; /* UTF-8 character for down-pointing triangle 
+		font-size: .5em;
+		color: #fff;
+		display: block;
+		position: absolute;
+		top: 38%;
 		right: 2%;
+	} */
+	
+	.drop-nav {
+		position: absolute;
+		display: none;
+		width: 200px; /* width of submenus */
+		padding-left: 0;
+	}
+	
+	.long-line {
+		width: 300px; /* width of "What we do"'s submenu with long lines: Empowerment and education, etc. */
+	}
+	
+	.drop-nav li {
+		border-bottom: 1px solid #78191D;
 	}
 
 	/* menu icon */
@@ -83,19 +117,19 @@
 	NAVIGATION
 	******************************/
 	.main-nav {
-		padding-left: 0;
+		padding-left: 2%;
 	}
 	
 	.main-nav a {
-		padding: 10px 30px;
+		padding: 10px 20px;
 	}
 	
 	.main_menu {
 		font-size: 1em;
 	}
 	
-	.dropdown:after { /* arrow-icon */
-		right: 8%;
+	.arrow { /* down arrow icon */
+		margin-right: 10px;
 	}
 	
 	#donate-bg {
@@ -111,6 +145,10 @@
 	******************************/
 	.main-nav {
 		padding-left: 5%;
+	}
+	
+	.main-nav a {
+		padding: 10px 30px;
 	}
 	
 	#donate-bg {
