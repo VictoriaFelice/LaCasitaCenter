@@ -17,6 +17,12 @@
 	/******************************
 	NAVIGATION
 	******************************/
+	.nav-wrap {
+		position: fixed;
+		width: 100%;
+		z-index: 3;
+	}
+	
 	.main-nav {
 		padding-left: 0;
 		display: block !important; /* ensure .main-nav is visible on desktop version */
@@ -50,16 +56,6 @@
 		margin-right: 2px;
 	}
 	
-	/* .main_menu:after { /* this code had problems on mobile screens) 
-		content: "\25BC"; /* UTF-8 character for down-pointing triangle 
-		font-size: .5em;
-		color: #fff;
-		display: block;
-		position: absolute;
-		top: 38%;
-		right: 2%;
-	} */
-	
 	.drop-nav {
 		position: absolute;
 		display: none;
@@ -91,24 +87,32 @@
 	/******************************
 	HEADER
 	******************************/
-	header {
-		height: 200px;
-	}
-	
-	header a {
-		width: 253px;
-		height: 162px;
-		margin-top: -84px;
-	}
-	
 	#logo-img {
 		width: 253px;
 		height: 162px;
 	}
 	
+	.header-icons {
+		position: absolute;
+		top: 45px;
+		right: 200px;
+	}
+	
+	.facebook,
+	.twitter,
+	.search,
+	.spanish {
+		margin-left: 5px;
+	}
+	
+	.search {
+		width: 250px;
+	}
+	
 	header h1 {
 		font-size: 2em;
 		margin-right: 15%;
+		width: 45%;
 	}
 }
 
