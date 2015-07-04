@@ -1,12 +1,9 @@
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
 	margin: 0;
+	padding-top: 45px; /* reveal top-bar (its height 45px) */
 	color: #000;
 	font-family: sans-serif;
+	overflow-x: hidden;
 }
 
 a:focus { /* remove default dotted outline styles on visited links. But be careful removing them, as they are a usability feature. If you do, make sure to define focus styles later in your code (from treehouse). See focus styles defined later. */
@@ -20,8 +17,95 @@ ul {
 }
 
 /******************************
+TOP BAR
+******************************/
+.top-bar {
+	position: fixed;
+  top: 0;
+	width: 100%;
+	height: 45px;
+	background: #DD7901;
+}
+
+.top-bar-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 940px;
+}
+
+.top-bar-elements {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+table {
+	height: 30px;
+}
+
+td {
+	vertical-align: middle;
+}
+
+.top-bar-elements a {
+  display: inline-block;
+}
+
+.facebook {
+  width: 21px;
+  height: 21px;
+  background: url('../img/facebook-icon.png') no-repeat;
+	padding-bottom: 3px;
+	margin-right: 3px;
+}
+
+.twitter {
+  width: 21px;
+  height: 21px;
+  background: url('../img/twitter-icon.png') no-repeat;
+}
+
+.spanish {
+	text-transform: uppercase;
+	font-size: 0.6em;
+	font-weight: bold;
+  padding: 3px 10px;
+  background: #fff;
+  color: #A63B35;
+	text-decoration: none;
+}
+
+.search {
+	width: 150px;
+}
+
+/******************************
 NAVIGATION
 ******************************/
+.menu-icon-bar {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background: #78191D url('../img/menu-icon.png') no-repeat 16% center;
+	color: #fff;
+	padding: 15px 10px 0 30%; /* positioning of the word MENU */
+	cursor: pointer;
+	z-index: 1;
+}
+
+.nav-wrap {
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+
+.nav-wrap-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
 .main-nav,
 .drop-nav {
   background: #A63B35;
@@ -29,7 +113,7 @@ NAVIGATION
 
 .main-nav {
 	display: none; /* visibility will be toggled with jquery */
-	margin-top: 40px;
+	/* padding-top: 40px; */
 	width: 100%;
 	min-height: 30px;
   float: left;
@@ -73,24 +157,12 @@ a.selected {
   display: block;
 }
 
-/* menu icon bar */ 
-#menu-icon-bar {
-	position: fixed;
-	width: 100%;
-	height: 40px;
-	background: #78191D url('../img/menu-icon.png') no-repeat 16% center;
-	color: #fff;
-	padding: 12px 10px 0 25%; /* positioning of the word MENU */
-	cursor: pointer;
-	z-index: 1;
-}
-
 #donate-bg {
-	position: fixed;
+	position: relative;
 	width: 80px;
 	height: 76px;
 	text-align: center;
-	top: 0px;
+	top: 34px; /* height of top-bar */
 	right: 10%;
 	float: left;
 	background: url('../img/donateRibbon768.png') no-repeat;
@@ -101,70 +173,31 @@ a.selected {
 /******************************
 HEADER
 ******************************/
-header {
+.banner {
+	position: relative;
 	width: 100%;
-	height: 100%;
-	float: left;
+	padding-top: 50px;
 	margin: 0 0 30px 0; /*  separate header from content of the page (bottom h-gap) */
-	padding: 55px 10px 10px; /* padding around logo-img */
 	background: #E0D7C8;
 }
 
+.banner-wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0;
+}
+
 #logo-img {
+	padding: 0 5%;
 	width: 100px;
 	height: 64px;
-	margin-top: 0.5%;
-	margin-bottom: 0.5%;
-	margin-left: 10%;
 }
 
-.header-icons {
-		position: absolute;
-		top: 45px;
-		right: 200px;
-}
-
-.facebook,
-.twitter,
-.search,
-.spanish {
-  display: list-item;
-}
-
-.header-icons>li {
-  float: left;
-}
-
-.facebook {
-  width: 30px;
-  height: 30px;
-  background: url('../img/facebook-icon.png') no-repeat;
-}
-
-.twitter{
-  width: 30px;
-  height: 30px;
-  background: url('../img/twitter-icon.png') no-repeat;
-}
-
-.spanish {
-	/* text-transform: uppercase; */
-	font-size: 0.75em;
-  padding: 6px 10px;
-  background: #234663;
-  color: #fff;
-	text-decoration: none;
-}
-.search {
-	width: 100%;
-}
-
-header h1 {
-	float: right;
+h1 {
+	padding-right: 5%;
 	font-family: 'Molengo', sans-serif;
 	font-style: italic;
-	font-size: 0.5em;
-	margin-right: 5%;
+	font-size: 0.75em;
 	text-align: center;
 	width: 55%;
 	font-weight: normal;
@@ -172,17 +205,20 @@ header h1 {
 }
 
 /******************************
+CAROUSEL
+******************************/
+
+
+/******************************
 CONTENT
 ******************************/
 #wrapper {
+	background: #fff;
 	max-width: 940px; /* max-width on the wrapper means that the element will never grow larger than a specific maximum width, but it can get smaller if necessary */
-	margin: 0 auto; /* will center a wrapper element inside the browser window.
-	1st value "0" sets the margin on the top and the bottom of the element. 2nd value, auto, will simply fill in any space that's on the left or right side of the margin */
-	padding: 0 5%; /* similar to margin values above. 1st value represents the top and bottom (zero). 2nd value represents the left and right */
+	margin: 0 auto; /* will center a wrapper element inside the browser window. */
+	padding: 0 5%;
 }
 
 section p {
 	margin-top: 0;
 }
-
-
