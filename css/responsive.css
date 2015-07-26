@@ -2,48 +2,67 @@
 	/******************************
 	TOP BAR
 	******************************/
-	.top-bar-elements {
-		padding-right: 5%;
+	.search {
+		width: 185px;
+	}
+	
+	/******************************
+	HEADER
+	******************************/
+	h1 {
+		width: 72%;
+		padding-top: 7px;
+		font-size: 0.9375em;
 	}
 }
+
 
 @media screen and (min-width: 640px) {
 	/******************************
-	NAVIGATION
+	TOP BAR
 	******************************/
+	.top-bar a.youcan  {
+		display: inline-block;
+		float: right;
+		padding-top: 4px;
+		font-size: 0.9em;
+		font-style: italic;
+	}
+	
+	/******************************
+	HEADER
+	******************************/
+	h1 {
+		width: 80%;
+		font-size: 1em;
+	}
 }
 
-@media screen and (min-width: 768px) {
-	body {
-		padding-top: 40px; /* reveal top-bar (its height 40px) */
-	}
 
+@media screen and (min-width: 768px) {
 	/******************************
 	TOP BAR
 	******************************/
-	.top-bar {
-		height: 40px;
+	.spanish,
+	.top-bar a.youcan {
+		font-size: 1em;
 	}
 	
-	.spanish {
-		padding: 6px 10px;
-	}
-
 	.search {
 		width: 250px;
 	}
-
 
 	/******************************
 	NAVIGATION
 	******************************/
 	.menu-icon-bar {
-		display: none;
+		display: none; /* hide menu icon */
 	}
 	
 	.main-nav {
 		padding-left: 0;
-		display: block !important; /* ensure .main-nav is visible on desktop version */
+		display: block !important; /* ensure that main-nav is visible on 768px and up screens */
+		float: left;
 		padding-top: 0;
 	}
 	
@@ -89,42 +108,59 @@
 	.drop-nav li {
 		border-bottom: 1px solid #78191D;
 	}
-
-	/* menu icon */
-	.menu-icon-bar {
-		display: none; /* hide menu icon */
+	
+	.verticalribbon {
+		right: 0;
 	}
 	
 	/******************************
-	BANNER
+	HEADER
 	******************************/
 	.banner {
-		height: 140px;
-		padding-top: 50px;
+		height: 135px;
+		padding-top: 45px;
 	}
 	
 	#logo-img {
-		/* padding-left: 5%; */
 		width: 200px;
 		height: 128px;
 	}
 	
 	h1 {
-		font-size: 2em;
-		width: 45%;
+		width: 65%;
+		font-size: 1.6em;
 	}
+	
+	/******************************
+	CONTENT
+	******************************/
+	/* all cols margin */
+  [class*="col-"] {
+    margin-right: 20px;
+  }
+  [class*="col-"]:last-child {
+    margin-right: 0;
+  }
+  
+  /* make the columns responsive */
+  .col-1-4 {
+    float: left;
+    width: 24.5%;
+  }
+	
+	/* 4 span rows */
+  .row-4 {
+    padding-left: 60px;
+  }
+  .row-4 [class*="col-"]:first-child {
+    margin-left: -60px;
+  }
 }
+
 
 @media screen and (min-width: 1024px) {
 	.wrapper {
 		padding: 0;
-	}
-	
-	/******************************
-	TOP BAR
-	******************************/
-	.top-bar-elements {
-		padding-right: 0;
 	}
 	
 	/******************************
@@ -147,11 +183,22 @@
 	}
 	
 	.verticalribbon {
-		width: 100px; /* ribbon width */
+		width: 100px; /* ribbon is wider */
     height: 60px;
     font-size: 18px;
+		right: 5%;
+	}
+	
+	/******************************
+	HEADER
+	******************************/
+	h1 {
+		width: 72%;
+		padding-top: 15px;
+		font-size: 2em;
 	}
 }
+
 
 @media screen and (min-width: 1260px) {
 	/******************************
@@ -168,9 +215,4 @@
 	.arrow { /* down arrow icon */
 		margin-right: 15px;
 	}
-	
-	/******************************
-	BANNER
-	******************************/
-
 }
