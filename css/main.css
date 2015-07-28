@@ -78,6 +78,19 @@ TOP BAR
 /******************************
 NAVIGATION
 ******************************/
+.nav-wrap {
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+
+.nav-wrap,
+.nav-wrap * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 .menu-icon-bar {
 	position: relative;
 	width: 100%;
@@ -88,15 +101,6 @@ NAVIGATION
 	padding-left: 27%;
 	cursor: pointer;
 	z-index: 1;
-}
-
-.nav-wrap {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
-	z-index: 3;
 }
 
 .main-nav,
