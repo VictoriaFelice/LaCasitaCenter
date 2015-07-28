@@ -10,7 +10,6 @@ body {
 	max-width: 940px;
 	margin: 0 auto;
 	padding: 0 5%;
-	/* border: 1px solid green; use to make sure everything is aligned properly */
 }
 
 a {
@@ -198,7 +197,7 @@ HEADER
 	height: 64px;
 }
 
-h1 {
+header h1 {
 	float: right;
 	width: 60%;
 	padding-top: 5px;
@@ -214,41 +213,38 @@ h1 {
 CAROUSEL
 ******************************/
 #carousel {
-	/* position: relative;
-	width: 100%;
-	max-width: 920px;
-	margin: 0 auto;
-	top: 0;
-	left: -11px; /* 10px padding (see below) + 1px border
-	 */
-	
 	width: 100%;
 	position: relative;
-	padding-top: 40%;
+	padding-top: 38%; /* 570/1500 */
 	overflow: hidden;
 }
 
 #carousel img {
-	/* position: absolute; */
-	/* background-color: #f3f4ef;
-	border: 1px solid #dedede;
-	padding: 10px;
-	top: 0;
-	left: 0;
-	max-width: 100%;
-	height: auto;
-	overflow: hidden; */
-	
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top:0;
+	top: 0;
 	left: 0;
 }
 
 /******************************
 CONTENT
 ******************************/
+.description p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875em;
+	text-align: justify;
+	color: #222;
+}
+
+.description p span {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
+	color: #A63B35;
+	text-transform: uppercase;
+}
+
 .clearfix:after {
 	content: "";
   display: table;
@@ -258,34 +254,149 @@ CONTENT
 /* grid */
 [class*="row-"] {
   margin: 20px;
-}
-
-[class*="row-"]:last-child {
-  margin-bottom: 0;
+	padding-bottom: 20px;
 }
 
 [class*="col-"] {
-	border: 1px solid #ccc;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
-h3 {
-	font-family: 'Molengo', sans-serif;
-	font-weight: bold;
+ .col-1-4 {
+  float: left;
+  width: 44.8%;
+}
+
+.row-4 h3 {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
 	text-align: center;
+	font-size: 0.875em;
 }
 
 a:link.button-read {
 	display: block;
-	background:  #A63B35;
+	background: #DD7901;
   padding: 10px;
 	text-transform: uppercase;
 	text-align: center;
+	font-size: 0.75em;
+}
+
+.shadow {
+	box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.4);
+}
+
+/* LATEST NEWS */
+.news h2 {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
+	color: #005F75;
+	text-transform: uppercase;
+}
+
+.news td {
+    padding: 4px 15px;
+		vertical-align: top;
+		line-height: 1.5;
+}
+
+.date {
+	text-align: center;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
+	color: #A63B35;
+}
+
+.news h3 {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
+  font-size: 1em;
+  margin: 0;
+}
+
+.news-text {
+	font-family: 'Molengo', sans-serif;
+	font-weight: 400;
 }
 
 /******************************
 FOOTER
-******************************/
+/*******************************/
 footer {
+	background-color: #A63B35;
+	box-sizing: border-box;
 	width: 100%;
-	background: #A63B35;
+	padding: 10px 0px;
+	margin-top: 40px; /* separate header from the end of content */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+	vertical-align: top;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+/* footer left */
+footer p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.875em;
+	color:  #fff;
+}
+
+footer h3 {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 700;
+	color:  #F2B500;
+}
+
+.footer-icons {
+	margin-top: 10px;
+}
+
+.footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #fff;
+	border-radius: 2px;
+	margin-right: 3px;
+}
+
+/* footer center */
+.footer-center {
+	padding-top: 7px;
+}
+
+.footer-center img {
+	width: 38px;
+	height: 38px;
+	margin: 10px 10px 10px 0;
+	vertical-align: middle;
+}
+
+.footer-center p {
+	display: inline-block;
+	color: #fff;
+	vertical-align: middle;
+	margin:0;
+}
+
+/* footer right */
+.footer-right h3{
+	margin-bottom: 0px;
+}
+
+.footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+}
+
+p.copyright {
+	color: #000;
 }

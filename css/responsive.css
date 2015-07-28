@@ -9,7 +9,7 @@
 	/******************************
 	HEADER
 	******************************/
-	h1 {
+	header h1 {
 		width: 72%;
 		padding-top: 7px;
 		font-size: 0.9375em;
@@ -32,10 +32,34 @@
 	/******************************
 	HEADER
 	******************************/
-	h1 {
+	header h1 {
 		width: 80%;
 		font-size: 1em;
 	}
+	
+	/******************************
+	CONTENT
+	******************************/
+  [class*="col-"] {
+    margin-right: 20px;
+  }
+	
+  [class*="col-"]:last-child {
+    margin-right: 0;
+  }
+  
+  .col-1-4 {
+    width: 24.5%;
+  }
+	
+	/* 4 span rows */
+  .row-4 {
+    padding-left: 60px;
+  }
+	
+  .row-4 [class*="col-"]:first-child {
+    margin-left: -60px;
+  }
 }
 
 
@@ -126,35 +150,10 @@
 		height: 128px;
 	}
 	
-	h1 {
+	header h1 {
 		width: 65%;
 		font-size: 1.6em;
 	}
-	
-	/******************************
-	CONTENT
-	******************************/
-	/* all cols margin */
-  [class*="col-"] {
-    margin-right: 20px;
-  }
-  [class*="col-"]:last-child {
-    margin-right: 0;
-  }
-  
-  /* make the columns responsive */
-  .col-1-4 {
-    float: left;
-    width: 24.5%;
-  }
-	
-	/* 4 span rows */
-  .row-4 {
-    padding-left: 60px;
-  }
-  .row-4 [class*="col-"]:first-child {
-    margin-left: -60px;
-  }
 }
 
 
@@ -192,11 +191,37 @@
 	/******************************
 	HEADER
 	******************************/
-	h1 {
+	header h1 {
 		width: 72%;
 		padding-top: 15px;
 		font-size: 2em;
 	}
+	
+	/******************************
+	FOOTER
+	******************************/
+	.footer-left,
+	.footer-center,
+	.footer-right {
+		display: inline-block;
+		text-align: left;
+	}
+	
+	.footer-left {
+		width: 25%;
+	}
+	
+	.footer-center {
+		width: 40%;
+	}
+	
+	.footer-center img{
+		margin: 10px 10px;
+	}
+	
+	.footer-right {
+		width: 30%;
+	}	
 }
 
 
@@ -214,5 +239,21 @@
 	
 	.arrow { /* down arrow icon */
 		margin-right: 15px;
+	}
+	
+	/******************************
+	CONTENT
+	******************************/
+	.description p {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+	
+	.row-4 h3 {
+		font-size: 1.125em;
+	}
+
+	a:link.button-read {
+		font-size: 1em;
 	}
 }
