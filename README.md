@@ -1,4 +1,3 @@
-About the "La Casita Center" project.
 This is my <code>Louisville graduation project. The goal was to design a responsive website, using the knowledge gained in the front end development course.
 I picked up a non-profit organization in Louisville "La Casita Center" that does not have a responsive website and attempted to redesigned it.
 The new website was created, using mobile 1-st approach. Responsiveness was accomplished by implementing media queries at the certain breakpoints.
