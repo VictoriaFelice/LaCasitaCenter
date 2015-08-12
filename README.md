@@ -1,4 +1,4 @@
-This is my CodeLouisville graduation project. The goal was to design a responsive website, using the knowledge gained in the front end development course. I picked up a non-profit organization in Louisville "La Casita Center" that does not have a responsive website and attempted to redesigned it.
+This is my CodeLouisville graduation project. The goal was to design a responsive website, using the knowledge gained in the front end development course. I picked up a non-profit organization in Louisville "La Casita Center" that does not have a responsive website and attempted to redesign it.
 
 The new website was created, using mobile 1-st approach. Responsiveness was accomplished by implementing media queries at the certain breakpoints.
 I did not use any plug-ins or frameworks that help you build a website.  I used my knowledge gained from treehouse courses and created the website with just HTML5, CSS, and a little bit of JavaScript, and jQuery.
