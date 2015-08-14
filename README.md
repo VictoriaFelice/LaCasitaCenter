@@ -25,7 +25,8 @@ Also, I added several new things:
 
 Right now all other pages except the home page are linked to their existing pages. If La Casita Center approves my design and chooses to publish it, I will finish creating the rest of the pages. Each page will have the exact same design, incl. footer, just content will differ.
 
-Link to my project: http://victoriafelice.github.io/LaCasitaCenter/
-Link to their existing website to compare: http://www.lacasitacenter.org/
+Link to my project: http://victoriafelice.github.io/LaCasitaCenter/home.html.
+
+Link to their existing website to compare: http://www.lacasitacenter.org/.
 
 Thank you for taking your time to read this description.
