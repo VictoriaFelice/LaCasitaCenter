@@ -17,8 +17,14 @@ a {
 	color: #fff;
 }
 
-a:focus { /* remove default dotted outline styles on visited links. But be careful removing them, as they are a usability feature. If you do, make sure to define focus styles later in your code (from treehouse). See focus styles defined later. */
+a:focus { /* remove default dotted outline styles on visited links. But be careful removing them, as they are a usability feature. If you do, make sure to define focus styles later in your code (from treehouse). See focus styles defined next. */
   outline: 0;
+}
+
+a:hover, /* "because that white outline we got rid off earlier was providing an important accessibility feature, we should add back in a style for our links focus and active states. Personally, I just like to make them the same as the hover state. It's about the same thing, as far as actual function. Whatever your hover state is, even if it's shifting a background image or changing size or whatever, it can be joined with the active and focus states" (from treehouse) */
+a:focus,
+a.selected {
+	color: #FECB24;
 }
 
 ul {
@@ -127,12 +133,6 @@ NAVIGATION
 .main_menu {
 	text-transform: uppercase;
 	border-top: 1px solid #78191D;
-}
-
-a:hover, /* "because that white outline we got rid off earlier (a:focus {outline: 0;}) was providing an important accessibility feature, we should add back in a style for our links focus and active states. Personally, I just like to make them the same as the hover state. It's about the same thing, as far as actual function. Whatever your hover state is, even if it's shifting a background image or changing size or whatever, it can be joined with the active and focus states" (from treehouse) */
-a:focus,
-a.selected {
-	color: #FECB24;
 }
 
 .dropdown {
